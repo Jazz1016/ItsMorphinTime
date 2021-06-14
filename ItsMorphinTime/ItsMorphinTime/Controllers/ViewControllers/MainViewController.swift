@@ -11,7 +11,6 @@ class MainViewController: UIViewController {
     // MARK: - Outlets
     
     @IBOutlet weak var teamImageView: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var teamTableView: UITableView!
     @IBOutlet weak var itsMorphinTimeButton: UIButton!
 

@@ -51,6 +51,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="nameLabel" destination="qZP-sq-CVs" id="WUh-sf-kNs"/>
                                             <outlet property="rangerImageView" destination="kfd-we-O0y" id="wPR-yo-Z2x"/>
                                             <segue destination="Dqx-Kq-Qnx" kind="show" identifier="toDetailVC" id="Hqk-1A-mRb"/>
                                         </connections>
@@ -184,7 +185,6 @@
                     <navigationItem key="navigationItem" id="4A6-tc-d9P"/>
                     <connections>
                         <outlet property="itsMorphinTimeButton" destination="vYS-Ra-qTV" id="63l-JX-MLv"/>
-                        <outlet property="nameLabel" destination="qZP-sq-CVs" id="o5a-Qg-jwz"/>
                         <outlet property="teamImageView" destination="5db-hw-lTY" id="YNB-Vo-m4a"/>
                         <outlet property="teamTableView" destination="LLS-OM-RhD" id="AC1-aq-aJb"/>
                     </connections>
