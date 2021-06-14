@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LLS-OM-RhD">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LLS-OM-RhD">
                                 <rect key="frame" x="0.0" y="459" width="414" height="403"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -42,31 +42,34 @@
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It's Morphin Time!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXJ-Ya-0se">
                                 <rect key="frame" x="20" y="113" width="374" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Power-Rangers" translatesAutoresizingMaskIntoConstraints="NO" id="5db-hw-lTY">
-                                <rect key="frame" x="87" y="171" width="240" height="168"/>
+                                <rect key="frame" x="87" y="157" width="240" height="168"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vYS-Ra-qTV">
-                                <rect key="frame" x="147" y="411" width="120" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="It's Morphin Time"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vYS-Ra-qTV">
+                                <rect key="frame" x="124" y="412" width="166" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="It's Morphin Time">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="itsMorphinTimeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fge-8m-quz"/>
                                     <segue destination="8I7-gi-Khf" kind="show" id="0Ee-rd-frR"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GWw-5y-SC7">
-                                <rect key="frame" x="34" y="335" width="367" height="68"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GWw-5y-SC7">
+                                <rect key="frame" x="24" y="333" width="366" height="68"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="QHP-YM-BeG">
-                                        <rect key="frame" x="0.0" y="0.0" width="367" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="366" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QoP-xa-avt">
-                                                <rect key="frame" x="0.0" y="0.0" width="91" height="30"/>
-                                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="90.5" height="30"/>
+                                                <color key="backgroundColor" red="0.1194733903" green="0.1721848845" blue="0.33806174989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Blue Ranger">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -75,8 +78,8 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v1C-YO-8nv">
-                                                <rect key="frame" x="138" y="0.0" width="91" height="30"/>
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <rect key="frame" x="137.5" y="0.0" width="91" height="30"/>
+                                                <color key="backgroundColor" red="0.054579861459999997" green="0.031992707400000001" blue="0.055608712140000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Black Ranger">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -85,8 +88,8 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8i-6P-pVb">
-                                                <rect key="frame" x="276" y="0.0" width="91" height="30"/>
-                                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                                <rect key="frame" x="275.5" y="0.0" width="90.5" height="30"/>
+                                                <color key="backgroundColor" red="0.55484914780000005" green="0.16110575199999999" blue="0.16483172770000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Red Ranger">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -97,11 +100,11 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Peo-LF-y1C">
-                                        <rect key="frame" x="74" y="38" width="219" height="30"/>
+                                        <rect key="frame" x="12.5" y="38" width="341" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Co9-1P-jNo">
                                                 <rect key="frame" x="0.0" y="0.0" width="97" height="30"/>
-                                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                                <color key="backgroundColor" red="0.58625727890000001" green="0.37115156649999997" blue="0.4811808467" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Pink Ranger">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -109,9 +112,16 @@
                                                     <action selector="pinkRangerButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AnM-by-WLn"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ETN-Jz-p8H">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEl-qq-Ux2">
                                                 <rect key="frame" x="122" y="0.0" width="97" height="30"/>
-                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                <color key="backgroundColor" red="0.10781801489999999" green="0.26238328220000001" blue="0.28235721590000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <state key="normal" title="Green Ranger">
+                                                    <color key="titleColor" red="0.92156862750000001" green="0.92549019610000005" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ETN-Jz-p8H">
+                                                <rect key="frame" x="244" y="0.0" width="97" height="30"/>
+                                                <color key="backgroundColor" red="0.71409982439999997" green="0.61757147310000005" blue="0.33556988840000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Yellow Ranger">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -125,15 +135,22 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.92156862745098034" green="0.92549019607843142" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GWw-5y-SC7" secondAttribute="trailing" constant="24" id="2HZ-uk-IHh"/>
                             <constraint firstItem="nXJ-Ya-0se" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="9Eh-w0-PFh"/>
+                            <constraint firstItem="vYS-Ra-qTV" firstAttribute="top" secondItem="GWw-5y-SC7" secondAttribute="bottom" constant="11" id="Gfc-I4-PVI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nXJ-Ya-0se" secondAttribute="trailing" constant="20" id="HQR-a1-jsl"/>
+                            <constraint firstItem="GWw-5y-SC7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="I3y-aT-X8w"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LLS-OM-RhD" secondAttribute="bottom" id="O0g-bG-61o"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LLS-OM-RhD" secondAttribute="trailing" id="U1T-wY-pKe"/>
+                            <constraint firstItem="vYS-Ra-qTV" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="XXa-Te-ism"/>
+                            <constraint firstItem="LLS-OM-RhD" firstAttribute="top" secondItem="vYS-Ra-qTV" secondAttribute="bottom" constant="17" id="bPY-9Y-bmn"/>
                             <constraint firstItem="5db-hw-lTY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="dLf-7Q-ZZd"/>
-                            <constraint firstItem="5db-hw-lTY" firstAttribute="top" secondItem="nXJ-Ya-0se" secondAttribute="bottom" constant="29" id="eQg-5N-gQL"/>
+                            <constraint firstItem="5db-hw-lTY" firstAttribute="top" secondItem="nXJ-Ya-0se" secondAttribute="bottom" constant="15" id="eQg-5N-gQL"/>
+                            <constraint firstItem="GWw-5y-SC7" firstAttribute="top" secondItem="5db-hw-lTY" secondAttribute="bottom" constant="8" symbolic="YES" id="iHE-Ny-mlu"/>
                             <constraint firstItem="LLS-OM-RhD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ixs-hw-YqA"/>
+                            <constraint firstItem="vYS-Ra-qTV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="p0W-xa-V8h"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5db-hw-lTY" secondAttribute="trailing" constant="87" id="s3C-zN-jqF"/>
                             <constraint firstItem="nXJ-Ya-0se" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="t3A-RI-hdH"/>
                         </constraints>
@@ -248,15 +265,6 @@
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
