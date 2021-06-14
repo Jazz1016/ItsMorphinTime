@@ -71,7 +71,12 @@ class MainViewController: UIViewController {
         teamTableView.reloadData()
     }
     
+
     
+    @IBAction func greenRangerButtonTapped(_ sender: Any) {
+        
+    }
+
     
     @IBAction func itsMorphinTimeButtonTapped(_ sender: Any) {
 //        RangerController.shared.createRanger(name: "Max Poff", superPower: "Mullet Power", favMove: "Hair whip", skills: "Being trash at warzone", image: "https://cdn.discordapp.com/attachments/854020703527370813/854065689945702400/unknown.png")

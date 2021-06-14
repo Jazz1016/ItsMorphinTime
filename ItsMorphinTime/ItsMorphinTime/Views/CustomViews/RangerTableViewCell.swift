@@ -12,6 +12,9 @@ import UIKit
 class RangerTableViewCell: UITableViewCell {
     // MARK: - Outlets
     @IBOutlet weak var rangerImageView: UIImageView!
+
+    @IBOutlet weak var nameLabel: UILabel!
+
     
     var ranger: Ranger? {
         didSet {
