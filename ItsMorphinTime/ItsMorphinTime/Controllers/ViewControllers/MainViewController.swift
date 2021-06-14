@@ -15,7 +15,7 @@ class MainViewController: UIViewController {
     // MARK: - Outlets
     @IBOutlet weak var teamImageView: UIImageView!
     @IBOutlet weak var teamTableView: UITableView!
-    
+    @IBOutlet weak var itsMorphinTimeButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
