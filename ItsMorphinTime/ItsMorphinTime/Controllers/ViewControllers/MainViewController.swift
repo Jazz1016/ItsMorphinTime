@@ -41,6 +41,10 @@ class MainViewController: UIViewController {
         
     }
     
+    @IBAction func greenRangerButtonTapped(_ sender: Any) {
+        
+    }
+    
     @IBAction func itsMorphinTimeButtonTapped(_ sender: Any) {
         
     }
