@@ -20,11 +20,12 @@ class RangerTableViewCell: UITableViewCell {
     }
     
     func updateView(){
-        self.contentView.isHidden = true
         MainViewController.delegate = self
+        GlobalFns.displayPicture(url: ranger?.image, UIImageView: rangerImageView)
     }
     
     func showCell(name: String){
+
         if name == ranger?.name {
             self.contentView.isHidden = false
         }

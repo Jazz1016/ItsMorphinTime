@@ -8,21 +8,61 @@
 import Foundation
 
 class RangerController {
+    static let shared = RangerController()
     
-    static let rangers: [Ranger] = {
+    var rangers: [Ranger] = []
+    
+    func createRanger(name: String, superPower: String, favMove: String, skills: String, image: String){
+        let newRanger = Ranger(name: name, superPower: superPower, favMove: favMove, skills: skills, image: image)
         
-        let redRanger = Ranger(name: "James Lea", superPower: "", favMove: "", skills: "", image: "")
+        for i in rangers {
+            if i.name == newRanger.name {
+                print("Ranger already Added")
+                return
+            }
+        }
+        rangers.append(newRanger)
+        saveToPersistentStore()
+    }
+    
+    func deleteRanger(ranger: Ranger){
+        guard let rangerIndex = rangers.firstIndex(of: ranger) else {return}
         
-        let blueRanger = Ranger(name: "Anthony Byrd", superPower: "", favMove: "", skills: "", image: "")
+        rangers.remove(at: rangerIndex)
         
-        let blackRanger = Ranger(name: "Ethan Scott", superPower: "Faking it until you make it", favMove: "Ultimate Punch!", skills: "Googling, asking questions, and being uncertain", image: "")
+        saveToPersistentStore()
         
-        let pinkRanger = Ranger(name: "Lizzie Ferguson", superPower: "", favMove: "", skills: "", image: "")
-        
-        let yellowRanger = Ranger(name: "Colton Swapp", superPower: "E N E R G Y", favMove: "", skills: "", image: "")
-        
-        let greenRanger = Ranger(name: "Max Poff", superPower: "", favMove: "", skills: "", image: "")
-        
-        return [redRanger, blueRanger, blackRanger, pinkRanger, yellowRanger, greenRanger]
-    }()
+    }
+    
+//    static let rangers: [Ranger] = {
+//
+
+//
+//        return [redRanger, blueRanger, blackRanger, pinkRanger, yellowRanger, greenRanger]
+//    }()
+    
+    // MARK: - Persistence
+    func createPersistentStore() -> URL {
+        let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let fileURL = url[0].appendingPathComponent("ItsMorphinTime.json")
+        return fileURL
+    }
+    
+    func saveToPersistentStore() {
+        do {
+            let data = try JSONEncoder().encode(rangers)
+            try data.write(to: createPersistentStore())
+        } catch {
+            print("ERROR ENCODING SONGS")
+        }
+    }
+    
+    func loadFromPersistentStore() {
+        do {
+            let data = try Data(contentsOf: createPersistentStore())
+            rangers = try JSONDecoder().decode([Ranger].self, from: data)
+        } catch {
+            print("ERROR LOADING SONGS")
+        }
+    }
 }

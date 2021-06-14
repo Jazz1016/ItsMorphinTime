@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Ranger {
+class Ranger: Codable {
     
     var name: String
     var superPower: String
@@ -22,5 +22,12 @@ class Ranger {
         self.skills = skills
         self.image = image
     }
-    
+}
+
+// MARK: - Extensions
+
+extension Ranger: Equatable {
+    static func == (lhs: Ranger, rhs: Ranger) -> Bool {
+        return lhs.name == rhs.name
+    }
 }
