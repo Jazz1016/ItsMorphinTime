@@ -34,13 +34,24 @@
                                                         <constraint firstAttribute="height" constant="50" id="eqh-QW-Mvx"/>
                                                     </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZP-sq-CVs">
+                                                    <rect key="frame" x="272" y="89" width="73" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="kfd-we-O0y" firstAttribute="centerX" secondItem="3m6-mF-H35" secondAttribute="centerX" id="37T-fg-PKl"/>
+                                                <constraint firstItem="qZP-sq-CVs" firstAttribute="centerY" secondItem="kfd-we-O0y" secondAttribute="centerY" id="Sqs-X0-bw9"/>
+                                                <constraint firstItem="qZP-sq-CVs" firstAttribute="leading" secondItem="kfd-we-O0y" secondAttribute="trailing" constant="40" id="UrG-kD-CaK"/>
+                                                <constraint firstItem="qZP-sq-CVs" firstAttribute="top" secondItem="3m6-mF-H35" secondAttribute="topMargin" constant="78" id="VBd-hE-wNL"/>
                                                 <constraint firstItem="kfd-we-O0y" firstAttribute="centerY" secondItem="3m6-mF-H35" secondAttribute="centerY" id="Xgn-bJ-u2p"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="qZP-sq-CVs" secondAttribute="trailing" constant="49" id="dLM-39-UmQ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="nameLabel" destination="qZP-sq-CVs" id="WUh-sf-kNs"/>
                                             <outlet property="rangerImageView" destination="kfd-we-O0y" id="wPR-yo-Z2x"/>
                                             <segue destination="Dqx-Kq-Qnx" kind="show" identifier="toDetailVC" id="Hqk-1A-mRb"/>
                                         </connections>
@@ -58,7 +69,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vYS-Ra-qTV">
                                 <rect key="frame" x="124" y="412" width="166" height="30"/>
-                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <color key="backgroundColor" red="0.43137254901960786" green="0.45490196078431372" blue="0.46274509803921571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="It's Morphin Time">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -71,12 +82,15 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GWw-5y-SC7">
                                 <rect key="frame" x="24" y="333" width="366" height="68"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="QHP-YM-BeG">
-                                        <rect key="frame" x="0.0" y="0.0" width="366" height="30"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="QHP-YM-BeG">
+                                        <rect key="frame" x="13" y="0.0" width="340" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QoP-xa-avt">
-                                                <rect key="frame" x="0.0" y="0.0" width="90.5" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
                                                 <color key="backgroundColor" red="0.1194733903" green="0.1721848845" blue="0.33806174989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="dSr-vs-OOM"/>
+                                                </constraints>
                                                 <state key="normal" title="Blue Ranger">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -85,7 +99,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v1C-YO-8nv">
-                                                <rect key="frame" x="137.5" y="0.0" width="91" height="30"/>
+                                                <rect key="frame" x="120" y="0.0" width="100" height="30"/>
                                                 <color key="backgroundColor" red="0.054579861459999997" green="0.031992707400000001" blue="0.055608712140000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Black Ranger">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -95,7 +109,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8i-6P-pVb">
-                                                <rect key="frame" x="275.5" y="0.0" width="90.5" height="30"/>
+                                                <rect key="frame" x="240" y="0.0" width="100" height="30"/>
                                                 <color key="backgroundColor" red="0.55484914780000005" green="0.16110575199999999" blue="0.16483172770000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Red Ranger">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -106,12 +120,15 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="Peo-LF-y1C">
-                                        <rect key="frame" x="0.0" y="38" width="366" height="30"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Peo-LF-y1C">
+                                        <rect key="frame" x="13" y="38" width="340" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Co9-1P-jNo">
-                                                <rect key="frame" x="0.0" y="0.0" width="96.5" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="30"/>
                                                 <color key="backgroundColor" red="0.58625727890000001" green="0.37115156649999997" blue="0.4811808467" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="H26-fh-4Ah"/>
+                                                </constraints>
                                                 <state key="normal" title="Pink Ranger">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -120,14 +137,17 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEl-qq-Ux2">
-                                                <rect key="frame" x="134.5" y="0.0" width="97" height="30"/>
+                                                <rect key="frame" x="120" y="0.0" width="100" height="30"/>
                                                 <color key="backgroundColor" red="0.10781801489999999" green="0.26238328220000001" blue="0.28235721590000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" title="Green Ranger">
                                                     <color key="titleColor" red="0.92156862750000001" green="0.92549019610000005" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="greenRangerButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zrT-Qj-F5n"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ETN-Jz-p8H">
-                                                <rect key="frame" x="269.5" y="0.0" width="96.5" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="ETN-Jz-p8H">
+                                                <rect key="frame" x="240" y="0.0" width="100" height="30"/>
                                                 <color key="backgroundColor" red="0.71409982439999997" green="0.61757147310000005" blue="0.33556988840000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Yellow Ranger">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -142,7 +162,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.92156862745098034" green="0.92549019607843142" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GWw-5y-SC7" secondAttribute="trailing" constant="24" id="2HZ-uk-IHh"/>
                             <constraint firstItem="nXJ-Ya-0se" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="9Eh-w0-PFh"/>
@@ -181,41 +201,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SUPER POWER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSF-UF-ev8">
-                                <rect key="frame" x="128" y="294" width="117" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Favorite Move" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zC9-lZ-B3G">
-                                <rect key="frame" x="133" y="366" width="106" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0u-RH-Rwb">
-                                <rect key="frame" x="162" y="247" width="48" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Skills" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPf-Mg-AhM">
-                                <rect key="frame" x="79" y="433" width="230" height="205"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FfG-mr-8HQ">
-                                <rect key="frame" x="69" y="88" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="iec-wb-wfu">
+                                <rect key="frame" x="58" y="491" width="298" height="127"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0u-RH-Rwb">
+                                        <rect key="frame" x="125.5" y="0.0" width="47.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SUPER POWER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSF-UF-ev8">
+                                        <rect key="frame" x="90.5" y="35.5" width="117" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FAVORITE MOVE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zC9-lZ-B3G">
+                                        <rect key="frame" x="84.5" y="71" width="129" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SKILLS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPf-Mg-AhM">
+                                        <rect key="frame" x="122" y="106.5" width="54.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FfG-mr-8HQ">
+                                <rect key="frame" x="60" y="142" width="294" height="295"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="295" id="zOF-Jl-51c"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="krB-MO-uPM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iec-wb-wfu" firstAttribute="centerX" secondItem="krB-MO-uPM" secondAttribute="centerX" id="8dL-Oc-ta8"/>
+                            <constraint firstItem="krB-MO-uPM" firstAttribute="trailing" secondItem="FfG-mr-8HQ" secondAttribute="trailing" constant="60" id="QE8-8U-mnA"/>
+                            <constraint firstItem="iec-wb-wfu" firstAttribute="top" secondItem="FfG-mr-8HQ" secondAttribute="bottom" constant="54" id="W3k-F8-ken"/>
+                            <constraint firstItem="FfG-mr-8HQ" firstAttribute="top" secondItem="krB-MO-uPM" secondAttribute="top" constant="54" id="iwv-i2-8s8"/>
+                            <constraint firstItem="FfG-mr-8HQ" firstAttribute="leading" secondItem="krB-MO-uPM" secondAttribute="leading" constant="60" id="q0g-Ca-oBw"/>
+                            <constraint firstItem="iec-wb-wfu" firstAttribute="width" secondItem="20o-58-Bpb" secondAttribute="width" multiplier="0.72" id="tgC-A9-C2Q"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="I7N-E5-aRH"/>
                     <connections>
@@ -269,9 +300,6 @@
         <image name="Power-Rangers" width="300" height="168"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

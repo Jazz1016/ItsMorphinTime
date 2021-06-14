@@ -46,6 +46,10 @@ class MainViewController: UIViewController {
         MainViewController.delegate?.showSelectedCell(name: "Colton")
     }
     
+    @IBAction func greenRangerButtonTapped(_ sender: Any) {
+        
+    }
+    
     @IBAction func itsMorphinTimeButtonTapped(_ sender: Any) {
         
     }
