@@ -13,10 +13,11 @@
 		0DB97CEC2677B53800F9F7A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DB97CEA2677B53800F9F7A0 /* Main.storyboard */; };
 		0DB97CEE2677B53B00F9F7A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DB97CED2677B53B00F9F7A0 /* Assets.xcassets */; };
 		0DB97CF12677B53B00F9F7A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DB97CEF2677B53B00F9F7A0 /* LaunchScreen.storyboard */; };
-		0DB97D032677B5D300F9F7A0 /* ModelPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB97D022677B5D300F9F7A0 /* ModelPlaceholder.swift */; };
+
 		0DB97D052677B79400F9F7A0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB97D042677B79400F9F7A0 /* MainViewController.swift */; };
 		0DB97D072677B7A400F9F7A0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB97D062677B7A400F9F7A0 /* DetailViewController.swift */; };
-		AC50D1802677C00E007BE2B4 /* ModelControllerPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC50D17F2677C00E007BE2B4 /* ModelControllerPlaceholder.swift */; };
+		AA662DBF2677BC320061145E /* Ranger.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA662DBE2677BC320061145E /* Ranger.swift */; };
+		AA662DC32677BE460061145E /* RangerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA662DC22677BE460061145E /* RangerController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,10 +29,12 @@
 		0DB97CED2677B53B00F9F7A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0DB97CF02677B53B00F9F7A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0DB97CF22677B53B00F9F7A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0DB97D022677B5D300F9F7A0 /* ModelPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelPlaceholder.swift; sourceTree = "<group>"; };
+
 		0DB97D042677B79400F9F7A0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		0DB97D062677B7A400F9F7A0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		AC50D17F2677C00E007BE2B4 /* ModelControllerPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelControllerPlaceholder.swift; sourceTree = "<group>"; };
+		AA662DBE2677BC320061145E /* Ranger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ranger.swift; sourceTree = "<group>"; };
+		AA662DC22677BE460061145E /* RangerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangerController.swift; sourceTree = "<group>"; };
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +107,7 @@
 		0DB97CFB2677B57E00F9F7A0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0DB97D022677B5D300F9F7A0 /* ModelPlaceholder.swift */,
+				AA662DBE2677BC320061145E /* Ranger.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -138,7 +141,9 @@
 		0DB97CFF2677B5AE00F9F7A0 /* ModelControllers */ = {
 			isa = PBXGroup;
 			children = (
-				AC50D17F2677C00E007BE2B4 /* ModelControllerPlaceholder.swift */,
+
+				AA662DC22677BE460061145E /* RangerController.swift */,
+
 			);
 			path = ModelControllers;
 			sourceTree = "<group>";
@@ -213,13 +218,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+
+
 				0D9BB5AE2677BA24001EA980 /* RangerTableViewCell.swift in Sources */,
 				0DB97CE52677B53800F9F7A0 /* AppDelegate.swift in Sources */,
 				0DB97D052677B79400F9F7A0 /* MainViewController.swift in Sources */,
+				AA662DBF2677BC320061145E /* Ranger.swift in Sources */,
 				0DB97D072677B7A400F9F7A0 /* DetailViewController.swift in Sources */,
-				AC50D1802677C00E007BE2B4 /* ModelControllerPlaceholder.swift in Sources */,
 				0DB97CE72677B53800F9F7A0 /* SceneDelegate.swift in Sources */,
-				0DB97D032677B5D300F9F7A0 /* ModelPlaceholder.swift in Sources */,
+				AA662DC32677BE460061145E /* RangerController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +374,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PL9PU89DSG;
 				INFOPLIST_FILE = ItsMorphinTime/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -385,6 +393,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PL9PU89DSG;
 				INFOPLIST_FILE = ItsMorphinTime/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
